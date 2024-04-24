@@ -1,39 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sample HTML</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f0f0f0;
-        }
-        .container {
-            width: 80%;
-            margin: auto;
-            padding: 20px;
-            background-color: #fff;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            border-radius: 5px;
-            margin-top: 50px;
-        }
-        h1 {
-            text-align: center;
-            color: #333;
-        }
-        p {
-            color: #666;
-            line-height: 1.6;
-        }
-    </style>
-</head>
-<body>
-
+{% extends 'local_connect/base.html' %}
+{% block title %}{{ login }} {% endblock %}
+{% load crispy_forms_tags %}
+{% block content %}
 <div class="container">
-    <h1>Welcome to Sample HTML</h1>
-    <p>This is a sample HTML page. You can modify it as per your requirements.</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor.</p>
-    <p>Phasellus eu nunc ac sem malesuada dignissim. Cras lacinia rutrum libero. Nulla facilisi. Etiam rhoncus. Mauris
+    <div class="row mt-5">
+        <div class="col-md-8">
+            <h4>Login</h4>
+            <hr>
+            <form method="POST">
+                {% csrf_token %}
+                {{ form | crispy }}
+                <br>
+                <input class="btn btn-info" type="submit" value="Login">
+            </form>
+        </div>
+
+    </div>
+</div>
+{% endblock %}

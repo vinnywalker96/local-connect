@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    {% if user.is_authenticated and user.account_type == 'business' %}
+    {% if user.account_type == 'business' %}
 
     <nav class="navbar navbar-expand-lg bg-light">
       <div class="container">
@@ -29,14 +29,14 @@
               <a class="nav-link active" aria-current="page" href="{% url 'profile' %}">Profile</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" href="">Logout</a>
+              <a class="nav-link active" href="{% url 'logout' %}">Logout</a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
 
-    {% elif user %}
+    {% elif user.account_type == 'user' %}
 
     <nav class="navbar navbar-expand-lg bg-light">
       <div class="container">

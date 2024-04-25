@@ -26,4 +26,5 @@ urlpatterns = [
     path('', include('local_connect.urls')),
     path('', auth.LoginView.as_view(template_name='local_connect/login.html'), name='login'),
     path('logout', auth.LogoutView.as_view(template_name='local_connect/logout.html'), name='logout'),
-]
+    
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

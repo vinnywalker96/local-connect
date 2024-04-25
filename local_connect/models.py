@@ -11,6 +11,6 @@ class User(AbstractUser):
     ]
 	account_type = models.CharField(max_length=20, choices=ACCOUNT_TYPE_CHOICES, default='user')
 
-	# # def __str__(self):
-    # # 	return self.username
-	# 
+
+
+

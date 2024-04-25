@@ -9,6 +9,4 @@ urlpatterns = [
     path('business-profile', views.business_profile, name='business_profile'),
     path('profile', views.profile, name='profile'),
     path('events', views.events, name='events'),
-
-
 ]

@@ -1,4 +1,5 @@
 {% extends 'local_connect/base.html' %}
+{% load static %}
 {% block title %}{{ profile }} {% endblock %}
 
 {% block content %}
@@ -19,22 +20,30 @@
                                     <tbody>
                                         <tr>
                                             <th scope="col">User Name</th>
-                                            <td scope="col"></td>
+                                            <td scope="col">{{ user.username }}</td>
                                         </tr>
                                         <tr>
                                             <th scope="col">Full Name</th>
-                                            <td scope="col"> </td>
+                                            <td scope="col">{{ user.first_name }} {{user.last_name}}</td>
                                         </tr>
                                         <tr>
-                                            <th scope="row">Email</th>
-                                            <td></td>
+                                            <th scope="col">Email</th>
+                                            <td scope="col">{{ user.email }}</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="col">Account Type</th>
+                                            <td scope="col">{{ user.account_type }}</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="col">Member Since</th>
+                                            <td scope="col">{{ user.date_joined }}</td>
                                         </tr>
                                     </tbody>
                                 </table>
                             </div>
                         </div>
                         <div class="col-md-4">
-                            <img style="border-radius: 50%; width: auto; height: auto;" class="img-thumbnail" src="{{ user.userprofile.picture.url }}" alt="profile picture">
+                            <img style="border-radius: 50%; width: auto; height: auto;" class="img-thumbnail" src="{% static 'picture.jpg' %}" alt="profile picture">
                         </div>
                     </div>
                 </div>

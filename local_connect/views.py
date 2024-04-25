@@ -6,6 +6,8 @@ from .forms import UserRegister, UserLogin
 from django.contrib.auth.models import auth
 from django.contrib.auth import authenticate, login, logout
 
+import uuid
+
 # Create your views here.
 
 User = get_user_model()
@@ -50,5 +52,9 @@ def events(request):
 
 def profile(request):
 	return render(request, "local_connect/profile.html")
+
+def payments(request):
+
+	return render(request, "local_connect/payment.html")
 
 

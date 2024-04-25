@@ -1,10 +1,7 @@
 {% extends 'local_connect/base.html' %}
-{% block title %}{{ register }} {% endblock %}
-{% load crispy_forms_tags %}
-{% block content %}
 <div class="container">
     <div class="alert">
-        <h4>Logged out</h4>
+        <h4>You are logged out!</h4>
         <a href="{% url 'login' %}">Login</a>
     </div>
 </div>

@@ -133,3 +133,4 @@ CRISPY_TEMPLATE_PACK = 'bootstrap5'
 
 LOGIN_REDIRECT_URL = 'community_hub'
 LOGIN = 'login'
+LOGOUT_REDIRECT_URL = 'login' #new

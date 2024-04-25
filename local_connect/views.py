@@ -42,6 +42,9 @@ def community_hub(request):
 def business_profile(request):
 	return render(request, "local_connect/business-profile.html")
 
+def view_business(request):
+	return render(request, "local_connect/view-business.html")
+
 def events(request):
 	return render(request, "local_connect/events.html")
 

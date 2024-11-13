@@ -37,14 +37,12 @@ ref source: https://docs.djangoproject.com/en/5.0/intro/tutorial01/
 # Testing Creds:
 
 ## Test User:
-   usr: kgomera
-   pwd: ask me
+- create new user
 
 ## Test Admin:
-   usr: kgomera2
-   pwd: ask me
+- create new admin
 
-## Debt Tesing card: 
+## Testing Debt Card: 
     number: 4111 1111 1111 1111
     exp: 01/25
     cvv: 111
